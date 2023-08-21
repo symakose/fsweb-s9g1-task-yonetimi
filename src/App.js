@@ -60,7 +60,11 @@ function App() {
             {tasks
               .filter((t) => t.status === "yapıldı")
               .map((t) => (
-                <Task key={t.id} taskObj={t} />
+                <Task
+                  key={t.id}
+                  taskObj={t}
+                  onComplete={() => handleComplete(t.id)}
+                />
               ))}
           </div>
         </div>
